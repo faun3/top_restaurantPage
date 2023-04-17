@@ -1,5 +1,7 @@
 const loadPage = () => {
-  const location = document.querySelector("#content");
+  const content = document.querySelector("#content");
+  const location = document.createElement("div");
+  location.setAttribute("class", "currentTab");
 
   const header = document.createElement("h1");
   header.textContent = `Sailad Dine-in & Takeaway`;
@@ -15,6 +17,7 @@ const loadPage = () => {
   location.appendChild(header);
   location.appendChild(image);
   location.appendChild(madeUpText);
+  content.appendChild(location);
 };
 
 export { loadPage };
