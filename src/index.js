@@ -1,5 +1,6 @@
 import { loadPage } from "./loadPage";
 import { loadContact } from "./contact";
+import { loadMenu } from "./menu";
 
 const clearTab = () => {
   const currentTab = document.querySelector(".currentTab");
@@ -17,6 +18,10 @@ landingBtn.addEventListener("click", () => {
 const menuBtn = document.createElement("button");
 menuBtn.setAttribute("id", "menuBtn");
 menuBtn.textContent = "MENU";
+menuBtn.addEventListener("click", () => {
+  clearTab();
+  loadMenu();
+});
 
 const contactBtn = document.createElement("button");
 contactBtn.setAttribute("id", "contactBtn");
