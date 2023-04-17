@@ -1,4 +1,5 @@
 import { loadPage } from "./loadPage";
+import { loadContact } from "./contact";
 
 const clearTab = () => {
   const currentTab = document.querySelector(".currentTab");
@@ -20,6 +21,10 @@ menuBtn.textContent = "MENU";
 const contactBtn = document.createElement("button");
 contactBtn.setAttribute("id", "contactBtn");
 contactBtn.textContent = "CONTACT";
+contactBtn.addEventListener("click", () => {
+  clearTab();
+  loadContact();
+});
 
 const buttonsDiv = document.createElement("div");
 buttonsDiv.classList.add("buttonsDiv");
